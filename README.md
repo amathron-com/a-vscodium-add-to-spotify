@@ -13,7 +13,7 @@ Spotify Search and Add is a VSCodium extension that allows users to search for s
 
 ## Demo
 
-![Spotify Search and Add Demo](https://github.com/amathron-com/a-vscodium-add-to-spotify/blob/main/amathron.addToSpotify.gif)
+![Spotify Search and Add Demo](https://raw.githubusercontent.com/amathron-com/a-vscodium-add-to-spotify/main/assets/amathron.addToSpotify.gif)
 
 ## Installation
 1. Create a new application in the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/):
