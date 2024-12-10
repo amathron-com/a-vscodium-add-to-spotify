@@ -1,0 +1,101 @@
+{
+  "name": "add-to-spotify",
+  "displayName": "Spotify Add Song",
+  "description": "Search and add a song to a Spotify playlist",
+  "version": "0.9.0",
+  "publisher": "Amathron",
+  "author": {
+    "name": "Max Grass",
+    "url": "https://amathron.com"
+  },
+  "icon": "./assets/amathron.addToSpotify.webp",
+  "funding": "https://github.com/sponsors/maxwowpow",
+  "galleryBanner": {
+    "color": "#306998",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "spotify",
+    "song"
+  ],
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    }
+  },
+  "homepage": "https://github.com/amathron-com/a-vscodium-add-to-spotify/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amathron-com/a-vscodium-add-to-spotify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amathron-com/a-vscodium-add-to-spotify/issues"
+  },
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onCommand:amathron.addToSpotify"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "amathron.addToSpotify",
+        "title": "Amathron Song: Add a song to Spotify"
+      },
+      {
+        "command": "amathron.setSpotifyPlaylist",
+        "title": "Amathron Song: Set a playlist to save songs into"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Amathron: Add to Spotify Settings",
+      "properties": {
+        "amathron.addToSpotify": {
+          "type": "object",
+          "description": "Settings for Adding a song to Spotify playlist",
+          "properties": {
+            "clientId": {
+              "type": "string",
+              "default": "",
+              "description": "Spotify Client ID"
+            },
+            "clientSecret": {
+              "type": "string",
+              "default": "",
+              "description": "Spotify Client Secret"
+            },
+            "redirectUri": {
+              "type": "string",
+              "default": "http://localhost:8080/callback",
+              "description": "Spotify Redirect URI"
+            },
+            "playlistId": {
+              "type": "string",
+              "default": "",
+              "description": "Spotify Playlist ID"
+            }
+          }
+        }
+      }
+    }
+  },
+  "scripts": {},
+  "license": "MIT",
+  "dependencies": {
+    "spotify-web-api-node": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.95.0",
+    "esbuild": "^0.24.0"
+  }
+}

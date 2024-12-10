@@ -1,0 +1,14 @@
+.vscode/**
+.vscode-test/**
+test/**
+.gitignore
+.yarnrc
+vsc-extension-quickstart.md
+**/jsconfig.json
+**/*.map
+**/.eslintrc.json
+src/
+esbuild.config.js
+assets/amathron.addToSpotify.mp4
+assets/amathron.addToSpotify.gif
+node_modules/
